@@ -1,0 +1,53 @@
+name: Feedback
+description: Use this form to submit feedback, bug reports, or feature requests. Do not include personal or sensitive information.
+title: "[Feedback] {{summary}}"
+labels: [feedback, triage]
+assignees: []
+body:
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      description: A short one-line summary of your feedback
+      placeholder: "UI freezes when saving"
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: Describe the issue or suggestion. Include steps to reproduce if applicable.
+      placeholder: "Steps to reproduce..."
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: Select the feedback type
+      options:
+        - Bug
+        - Feature Request
+        - Usability
+        - Documentation
+        - Other
+
+  - type: input
+    id: page_url
+    attributes:
+      label: Relevant App URL
+      description: The app page where you observed this (optional)
+
+  - type: checkbox
+    id: pii_confirm
+    attributes:
+      label: Privacy confirmation
+      options:
+        - label: "I confirm this feedback does not contain personal data or sensitive information."
+      required: true
+
+  - type: input
+    id: contact
+    attributes:
+      label: Contact email (optional)
+      description: If you'd like a response, provide an email. Do not include personal data in the main feedback.
